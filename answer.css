@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .sidebar {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .content {
+            background: #e9ecef;
+            padding: 20px;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Webpage</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Navigation links or additional content.</p>
+        </aside>
+        <main class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </main>
+    </div>
+    <footer>
+        <p>2025 Responsive Web Design</p>
+    </footer>
+</body>
+</html>
